@@ -1,5 +1,5 @@
 var mainHeight = 600;
-var mainWidth = 1000;
+var mainWidth = 1250;
 var leftExtraSpace = 0;
 var topExtraSpace = 0;
 
@@ -778,6 +778,7 @@ function pitchAndLoudness () {
   }
   for (var i = 0; i < trackDuration*100; i++) {
     var t = i/100;
+    // console.log(t.toFixed(2));
     var c = map(pitchTrack[t.toFixed(2)]['c'], minCent, maxCent, lyricsBoxBottom, lyricsBoxTop);
     if (c > lyricsBoxTop && c < lyricsBoxBottom) {
       cents.push(c);
